@@ -4,8 +4,6 @@ public class Movie {
     private int price;
     private String director;
 
-
-
     public Movie(String title, MovieGenre genre, int price) {
         this.title = title;
         this.genre = genre;
@@ -52,6 +50,8 @@ public class Movie {
         System.out.println("\nTitle: " + getTitle());
         System.out.println("Genre: " + getGenre().toString().substring(0,1).toUpperCase() + getGenre().toString().substring(1).toLowerCase());
         System.out.println("Price: " + getPrice() + ":-");
-        System.out.println("Director: " + getDirector());
+        if (!getDirector().equals("U/A")){
+            System.out.println("Director: " + getDirector());
+        }
     }
 }

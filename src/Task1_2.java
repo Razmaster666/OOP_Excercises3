@@ -12,9 +12,7 @@ public class Task1_2 {
         bookArray[0] = book1;
         bookArray[1] = book2;
 
-        for(Book book: bookArray){
-            book.printBookDetails();
-        }
+        displayAllBooks(bookArray);
 
         Movie [] movieArray = new Movie[3];
         movieArray[0] = movie1;
@@ -25,5 +23,10 @@ public class Task1_2 {
             movieArray[i].printMovieDetails();
         }
 
+    }
+    public static void displayAllBooks(Book [] x){
+        for(Book book: x){
+            book.printBookDetails();
+        }
     }
 }
