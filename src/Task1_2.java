@@ -6,8 +6,7 @@ public class Task1_2 {
 
         Movie movie1 = new Movie("Godzilla", MovieGenre.ACTION, 79);
         Movie movie2 = new Movie("Back to the Future",MovieGenre.COMEDY,89);
-
-
+        Movie movie3 = new Movie("Lost Highway",MovieGenre.DRAMA,120, "David Lynch");
 
         Book [] bookArray = new Book[2];
         bookArray[0] = book1;
@@ -17,9 +16,10 @@ public class Task1_2 {
             book.printBookDetails();
         }
 
-        Movie [] movieArray = new Movie[2];
+        Movie [] movieArray = new Movie[3];
         movieArray[0] = movie1;
         movieArray[1] = movie2;
+        movieArray[2] = movie3;
 
         for(int i = 0; i < movieArray.length; i++){
             movieArray[i].printMovieDetails();
