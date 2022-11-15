@@ -23,6 +23,7 @@ public class Task1_2 {
             movieArray[i].printMovieDetails();
         }
 
+
     }
     public static void displayAllBooks(Book [] x){
         for(Book book: x){
