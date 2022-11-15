@@ -4,6 +4,10 @@ public class Movie {
     private int price;
     private String director;
 
+    public Movie(){
+
+    }
+
     public Movie(String title, MovieGenre genre, int price) {
         this.title = title;
         this.genre = genre;
