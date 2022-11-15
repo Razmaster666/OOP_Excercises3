@@ -4,35 +4,35 @@ public class Task1_2 {
         Book book1 = new Book();
         Book book2 = new Book();
 
-        book1.author = "HP Lovecraft";
-        book1.title = "Mountain of Madness";
-        book1.price = 98;
+        book1.setAuthor("HP Lovecraft");
+        book1.setTitle("Mountain of Madness");
+        book1.setPrice(98);
 
-        book2.author = "Hjalmar Söderberg";
-        book2.title = "Doktor Glas";
-        book2.price = 120;
+        book2.setAuthor("Hjalmar Söderberg");
+        book2.setTitle("Doktor Glas");
+        book2.setPrice(120);
 
-//        printBookDetails(book2);
+//        book2.printBookDetails();
 
         Movie movie1 = new Movie();
         Movie movie2 = new Movie();
 
-        movie1.title = "Godzilla";
-        movie1.genre = MovieGenre.ACTION;
-        movie1.price = 79;
+        movie1.setTitle("Godzilla");
+        movie1.setGenre(MovieGenre.ACTION);
+        movie1.setPrice(79);
 
-        movie2.title = "Back to the Future";
-        movie2.genre = MovieGenre.COMEDY;
-        movie2.price = 89;
+        movie2.setTitle("Back to the Future");
+        movie2.setGenre(MovieGenre.COMEDY);
+        movie2.setPrice(89);
 
-//        printMovieDetails(movie2);
+//        movie2.printMovieDetails();
 
         Book [] bookArray = new Book[2];
         bookArray[0] = book1;
         bookArray[1] = book2;
 
         for(Book book: bookArray){
-            printBookDetails(book);
+            book.printBookDetails();
         }
 
         Movie [] movieArray = new Movie[2];
@@ -40,20 +40,8 @@ public class Task1_2 {
         movieArray[1] = movie2;
 
         for(int i = 0; i < movieArray.length; i++){
-            printMovieDetails(movieArray[i]);
+            movieArray[i].printMovieDetails();
         }
 
-    }
-
-    public static void printBookDetails(Book book){
-        System.out.println("\nTitle: " + book.title);
-        System.out.println("Author: " + book.author);
-        System.out.println("Price: " + book.price + ":-");
-    }
-
-    public static void printMovieDetails(Movie movie){
-        System.out.println("\nTitle: " + movie.title);
-        System.out.println("Genre: " + movie.genre.toString().substring(0,1).toUpperCase() + movie.genre.toString().substring(1).toLowerCase());
-        System.out.println("Price: " + movie.price + ":-");
     }
 }
