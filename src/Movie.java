@@ -29,7 +29,7 @@ public class Movie {
 
     public void printMovieDetails(){
         System.out.println("\nTitle: " + getTitle());
-        System.out.println("Genre: " + getGenre().toString().substring(0,1).toUpperCase() + movie.getGenre().toString().substring(1).toLowerCase());
+        System.out.println("Genre: " + getGenre().toString().substring(0,1).toUpperCase() + getGenre().toString().substring(1).toLowerCase());
         System.out.println("Price: " + getPrice() + ":-");
     }
 }
