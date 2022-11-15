@@ -1,4 +1,4 @@
-public class Task1 {
+public class Task1_2 {
     public static void main(String[] args) {
 
         Book book1 = new Book();
