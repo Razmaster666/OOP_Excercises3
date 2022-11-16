@@ -7,11 +7,11 @@ public class Task1_2 {
         Movie movie1 = new Movie("Godzilla", MovieGenre.ACTION, 79);
         Movie movie2 = new Movie("Back to the Future", MovieGenre.COMEDY, 89);
         Movie movie3 = new Movie("Lost Highway", MovieGenre.DRAMA, 120, "David Lynch");
+        Movie movie4 = new Movie();
 
         Movie.displayAllMovies();
 
         Book.displayAllBooks();
-
 
     }
 }
