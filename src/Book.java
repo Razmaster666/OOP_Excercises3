@@ -1,7 +1,10 @@
+import java.util.ArrayList;
+
 public class Book {
     private String title;
     private String author;
     private int price;
+    private static ArrayList<Book> bookList = new ArrayList<>();
 
     public Book(){
 
@@ -43,9 +46,9 @@ public class Book {
         System.out.println("Price: " + getPrice() + ":-");
     }
 
-    public static void displayAllBooks(Book [] x){
-        for(Book book: x){
-            book.printBookDetails();
+    public static void displayAll(){
+        for (Movie movie : Movie.getMovieList()) {
+            movie.printMovieDetails();
         }
     }
 }

@@ -8,7 +8,7 @@ public class Movie {
     private static ArrayList<Movie> movieList = new ArrayList<>();
 
     public Movie(){
-
+        this(null,null,0,null);
     }
 
     public Movie(String title, MovieGenre genre, int price){
