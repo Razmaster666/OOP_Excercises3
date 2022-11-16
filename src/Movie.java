@@ -3,6 +3,7 @@ public class Movie {
     private MovieGenre genre;
     private int price;
     private String director;
+
     public Movie(){
 
     }
@@ -54,4 +55,5 @@ public class Movie {
             System.out.println("Director: " + getDirector());
         }
     }
+
 }
