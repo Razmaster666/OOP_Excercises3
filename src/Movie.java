@@ -8,11 +8,11 @@ public class Movie {
     private static ArrayList<Movie> movieList = new ArrayList<>();
 
     public Movie(){
-        this("Unknown", MovieGenre.UNKNOWN,0,null);
+        this("Unknown", MovieGenre.UNKNOWN,0);
     }
 
     public Movie(String title, MovieGenre genre, int price){
-        this(title, genre, price, null);
+        this(title, genre, price, "Unknown");
     }
 
     public Movie(String title, MovieGenre genre, int price, String director) {
@@ -63,7 +63,7 @@ public class Movie {
         System.out.println("\nTitle: " + getTitle());
         System.out.println("Genre: " + getGenre().toString().substring(0,1).toUpperCase() + getGenre().toString().substring(1).toLowerCase());
         System.out.println("Price: " + getPrice() + ":-");
-        if (getDirector() != null){
+        if (!getDirector().equals("Unknown")){
             System.out.println("Director: " + getDirector());
         }
     }
