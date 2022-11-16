@@ -8,6 +8,9 @@ public class Task1_2 {
         Movie movie2 = new Movie("Back to the Future",MovieGenre.COMEDY,89);
         Movie movie3 = new Movie("Lost Highway",MovieGenre.DRAMA,120, "David Lynch");
 
+        for (Movie movie: Movie.getMovieList()){
+            movie.printMovieDetails();
+        }
 
         Book [] bookArray = new Book[2];
         bookArray[0] = book1;
@@ -15,7 +18,7 @@ public class Task1_2 {
 
 //        displayAllBooks(bookArray);
 
-        Book.displayAllBooks(bookArray);
+//        Book.displayAllBooks(bookArray);
 
         Movie [] movieArray = new Movie[3];
         movieArray[0] = movie1;
@@ -24,7 +27,7 @@ public class Task1_2 {
 
 //        displayAllMovies(movieArray);
 
-        Movie.displayAllMovies(movieArray);
+//        Movie.displayAllMovies(movieArray);
 
     }
     public static void displayAllBooks(Book [] x){
