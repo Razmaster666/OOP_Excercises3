@@ -47,6 +47,10 @@ public class Movie {
         this.price = price;
     }
 
+    public void setDirector(String director) {
+        this.director = director;
+    }
+
     public void printMovieDetails(){
         System.out.println("\nTitle: " + getTitle());
         System.out.println("Genre: " + getGenre().toString().substring(0,1).toUpperCase() + getGenre().toString().substring(1).toLowerCase());
