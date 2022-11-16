@@ -67,8 +67,8 @@ public class Movie {
             System.out.println("Director: " + getDirector());
         }
     }
-    public static void displayAllMovies(Movie [] x){
-        for(Movie movie: x){
+    public static void displayAllMovies(){
+        for (Movie movie : Movie.getMovieList()) {
             movie.printMovieDetails();
         }
     }
