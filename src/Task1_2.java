@@ -17,4 +17,5 @@ public class Task1_2 {
         Movie.findMovieById(99995,Movie.getMovieList());
 
     }
+
 }
