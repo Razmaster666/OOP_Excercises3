@@ -9,7 +9,7 @@ public class Movie {
     }
 
     public Movie(String title, MovieGenre genre, int price){
-        this(title, genre, price,null);
+        this(title, genre, price, null);
     }
 
     public Movie(String title, MovieGenre genre, int price, String director) {
