@@ -21,7 +21,6 @@ public class Task1_2 {
 
         displayAllMovies(movieArray);
 
-
     }
     public static void displayAllBooks(Book [] x){
         for(Book book: x){
