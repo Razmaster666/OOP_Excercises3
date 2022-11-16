@@ -1,8 +1,11 @@
+import java.util.ArrayList;
+
 public class Movie {
     private String title;
     private MovieGenre genre;
     private int price;
     private String director;
+    private static ArrayList<Movie> movieList = new ArrayList<>();
 
     public Movie(){
 
@@ -17,6 +20,7 @@ public class Movie {
         this.genre = genre;
         this.price = price;
         this.director = director;
+        movieList.add(this);
     }
 
     public String getDirector() {
@@ -49,6 +53,10 @@ public class Movie {
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    public static ArrayList<Movie> getMovieList() {
+        return movieList;
     }
 
     public void printMovieDetails(){
