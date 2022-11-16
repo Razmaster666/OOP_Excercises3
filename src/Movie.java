@@ -41,6 +41,14 @@ public class Movie {
         return price;
     }
 
+    public static ArrayList<Movie> getMovieList() {
+        return movieList;
+    }
+
+    public long getProductId() {
+        return productId;
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -57,14 +65,19 @@ public class Movie {
         this.director = director;
     }
 
-    public static ArrayList<Movie> getMovieList() {
-        return movieList;
+    public void setProductId(long productId) {
+        this.productId = productId;
+    }
+
+    public static void setMovieList(ArrayList<Movie> movieList) {
+        Movie.movieList = movieList;
     }
 
     public void printMovieDetails(){
         System.out.println("\nTitle: " + getTitle());
         System.out.println("Genre: " + getGenre().toString().substring(0,1).toUpperCase() + getGenre().toString().substring(1).toLowerCase());
         System.out.println("Price: " + getPrice() + ":-");
+        System.out.println("Product ID: " + getProductId());
         if (!getDirector().equals("Unknown")){
             System.out.println("Director: " + getDirector());
         }
