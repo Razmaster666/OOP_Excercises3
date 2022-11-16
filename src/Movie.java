@@ -91,7 +91,7 @@ public class Movie {
     public static Movie findMovieById (long productId, ArrayList<Movie> movieList){
         for(Movie movie : movieList){
             if (movie.getProductId() == productId){
-                System.out.println("Found this movie:");
+                System.out.println("\nFound this movie:");
                 movie.printMovieDetails();
                 return movie;
             }
