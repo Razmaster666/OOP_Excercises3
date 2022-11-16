@@ -9,7 +9,7 @@ public class Movie {
     private static ArrayList<Movie> movieList = new ArrayList<>();
 
     public Movie(){
-        this("Unknown", MovieGenre.UNKNOWN,0,"Unknown",0);
+        this("Unknown", MovieGenre.UNKNOWN,0,"Unknown",0L);
     }
 
     public Movie(String title, MovieGenre genre, int price, long productId){
@@ -87,4 +87,16 @@ public class Movie {
             movie.printMovieDetails();
         }
     }
+
+    public static Movie findMovieById (long productId, ArrayList<Movie> movieList){
+        for(Movie movie : movieList){
+            if (movie.getProductId() == productId){
+                System.out.println("Found this movie:");
+                movie.printMovieDetails();
+                return movie;
+            }
+        }
+        return null;
+    }
+
 }
