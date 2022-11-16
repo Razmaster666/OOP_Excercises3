@@ -7,13 +7,14 @@ public class Book {
     private static ArrayList<Book> bookList = new ArrayList<>();
 
     public Book(){
-
+        this(null, null, 0);
     }
 
     public Book(String title, String author, int price) {
         this.title = title;
         this.author = author;
         this.price = price;
+        bookList.add(this);
     }
 
     public String getTitle() {
@@ -26,6 +27,10 @@ public class Book {
 
     public int getPrice() {
         return price;
+    }
+
+    public static ArrayList<Book> getBookList() {
+        return bookList;
     }
 
     public void setTitle(String title) {
@@ -46,9 +51,9 @@ public class Book {
         System.out.println("Price: " + getPrice() + ":-");
     }
 
-    public static void displayAll(){
-        for (Movie movie : Movie.getMovieList()) {
-            movie.printMovieDetails();
+    public static void displayAllBooks(){
+        for (Book book : Book.getBookList()) {
+            book.printBookDetails();
         }
     }
 }

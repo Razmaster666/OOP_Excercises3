@@ -10,6 +10,8 @@ public class Task1_2 {
 
         Movie.displayAllMovies();
 
+        Book.displayAllBooks();
+
 
     }
 }
