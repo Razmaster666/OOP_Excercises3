@@ -43,6 +43,9 @@ public class Book {
         System.out.println("Price: " + getPrice() + ":-");
     }
 
-
-
+    public static void displayAllBooks(Book [] x){
+        for(Book book: x){
+            book.printBookDetails();
+        }
+    }
 }

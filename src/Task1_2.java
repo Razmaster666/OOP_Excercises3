@@ -12,14 +12,18 @@ public class Task1_2 {
         bookArray[0] = book1;
         bookArray[1] = book2;
 
-        displayAllBooks(bookArray);
+//        displayAllBooks(bookArray);
+
+        Book.displayAllBooks(bookArray);
 
         Movie [] movieArray = new Movie[3];
         movieArray[0] = movie1;
         movieArray[1] = movie2;
         movieArray[2] = movie3;
 
-        displayAllMovies(movieArray);
+//        displayAllMovies(movieArray);
+
+        Movie.displayAllMovies(movieArray);
 
     }
     public static void displayAllBooks(Book [] x){

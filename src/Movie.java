@@ -55,5 +55,9 @@ public class Movie {
             System.out.println("Director: " + getDirector());
         }
     }
-
+    public static void displayAllMovies(Movie [] x){
+        for(Movie movie: x){
+            movie.printMovieDetails();
+        }
+    }
 }
