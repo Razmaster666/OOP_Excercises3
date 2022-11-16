@@ -5,21 +5,23 @@ public class Movie {
     private MovieGenre genre;
     private int price;
     private String director;
+    private long productId;
     private static ArrayList<Movie> movieList = new ArrayList<>();
 
     public Movie(){
-        this("Unknown", MovieGenre.UNKNOWN,0);
+        this("Unknown", MovieGenre.UNKNOWN,0,"Unknown",0);
     }
 
-    public Movie(String title, MovieGenre genre, int price){
-        this(title, genre, price, "Unknown");
+    public Movie(String title, MovieGenre genre, int price, long productId){
+        this(title, genre, price, "Unknown", productId);
     }
 
-    public Movie(String title, MovieGenre genre, int price, String director) {
+    public Movie(String title, MovieGenre genre, int price, String director, long productId) {
         this.title = title;
         this.genre = genre;
         this.price = price;
         this.director = director;
+        this.productId = productId;
         movieList.add(this);
     }
 
