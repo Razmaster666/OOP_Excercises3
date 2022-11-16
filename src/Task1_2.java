@@ -3,6 +3,7 @@ public class Task1_2 {
 
         Book book1 = new Book("Mountain of Madness", "HP Lovecraft", 98);
         Book book2 = new Book("Doktor Glas", "Hjalmar Söderberg", 120);
+        Book book3 = new Book();
 
         Movie movie1 = new Movie("Godzilla", MovieGenre.ACTION, 79);
         Movie movie2 = new Movie("Back to the Future", MovieGenre.COMEDY, 89);
