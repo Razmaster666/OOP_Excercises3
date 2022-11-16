@@ -14,7 +14,9 @@ public class Task1_2 {
 //
 //        Book.displayAllBooks();
 
-        Movie.findMovieById(95,Movie.getMovieList());
+        Movie.findMovieById(244556,Movie.getMovieList());
+
+
 
     }
 

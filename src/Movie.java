@@ -8,11 +8,11 @@ public class Movie {
     private long productId;
     private static ArrayList<Movie> movieList = new ArrayList<>();
 
-    public Movie(){
-        this("Unknown", MovieGenre.UNKNOWN,0,"Unknown",0L);
+    public Movie() {
+        this("Unknown", MovieGenre.UNKNOWN, 0, "Unknown", 0L);
     }
 
-    public Movie(String title, MovieGenre genre, int price, long productId){
+    public Movie(String title, MovieGenre genre, int price, long productId) {
         this(title, genre, price, "Unknown", productId);
     }
 
@@ -73,24 +73,25 @@ public class Movie {
         Movie.movieList = movieList;
     }
 
-    public void printMovieDetails(){
+    public void printMovieDetails() {
         System.out.println("\nTitle: " + getTitle());
-        System.out.println("Genre: " + getGenre().toString().substring(0,1).toUpperCase() + getGenre().toString().substring(1).toLowerCase());
+        System.out.println("Genre: " + getGenre().toString().substring(0, 1).toUpperCase() + getGenre().toString().substring(1).toLowerCase());
         System.out.println("Price: " + getPrice() + ":-");
         System.out.println("Product ID: " + getProductId());
-        if (!getDirector().equals("Unknown")){
+        if (!getDirector().equals("Unknown")) {
             System.out.println("Director: " + getDirector());
         }
     }
-    public static void displayAllMovies(){
+
+    public static void displayAllMovies() {
         for (Movie movie : Movie.getMovieList()) {
             movie.printMovieDetails();
         }
     }
 
-    public static Movie findMovieById (long productId, ArrayList<Movie> movieList){
-        for(Movie movie : movieList){
-            if (movie.getProductId() == productId){
+    public static Movie findMovieById(long productId, ArrayList<Movie> movieList) {
+        for (Movie movie : movieList) {
+            if (movie.getProductId() == productId) {
                 System.out.println("\nFound this movie:");
                 movie.printMovieDetails();
                 return movie;
