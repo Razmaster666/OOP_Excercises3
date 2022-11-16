@@ -96,6 +96,7 @@ public class Movie {
                 return movie;
             }
         }
+        System.out.println("\nDidn't find a movie with productId: " + productId);
         return null;
     }
 

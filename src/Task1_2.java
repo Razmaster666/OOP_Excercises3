@@ -10,11 +10,11 @@ public class Task1_2 {
         Movie movie3 = new Movie("Lost Highway", MovieGenre.DRAMA, 120, "David Lynch", 99995);
         Movie movie4 = new Movie();
 
-        Movie.displayAllMovies();
+//        Movie.displayAllMovies();
+//
+//        Book.displayAllBooks();
 
-        Book.displayAllBooks();
-
-        Movie.findMovieById(99995,Movie.getMovieList());
+        Movie.findMovieById(95,Movie.getMovieList());
 
     }
 
