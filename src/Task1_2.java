@@ -14,13 +14,13 @@ public class Task1_2 {
 
         Movie.displayAllMovies();
 
-        Book.displayAllBooks();
+//        Book.displayAllBooks();
 
         findMovieById(244556L,Movie.getMovieList());
 
-        MovieRecord movieRec1 = new MovieRecord("Bomb");
-
-        System.out.println(movieRec1);
+//        MovieRecord movieRec1 = new MovieRecord("Bomb");
+//
+//        System.out.println(movieRec1);
 
 
     }

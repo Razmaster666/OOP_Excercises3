@@ -8,6 +8,8 @@ public class Movie {
     private long productId;
     private static ArrayList<Movie> movieList = new ArrayList<>();
 
+
+
     public Movie() {
         this("Unknown", MovieGenre.UNKNOWN, 0, "Unknown", 0L);
     }
