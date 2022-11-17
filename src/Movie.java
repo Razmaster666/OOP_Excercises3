@@ -49,37 +49,37 @@ public class Movie {
         return productId;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setGenre(MovieGenre genre) {
-        this.genre = genre;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public void setDirector(String director) {
-        this.director = director;
-    }
-
-    public void setProductId(long productId) {
-        this.productId = productId;
-    }
-
-    public static void setMovieList(ArrayList<Movie> movieList) {
-        Movie.movieList = movieList;
-    }
+//    public void setTitle(String title) {
+//        this.title = title;
+//    }
+//
+//    public void setGenre(MovieGenre genre) {
+//        this.genre = genre;
+//    }
+//
+//    public void setPrice(int price) {
+//        this.price = price;
+//    }
+//
+//    public void setDirector(String director) {
+//        this.director = director;
+//    }
+//
+//    public void setProductId(long productId) {
+//        this.productId = productId;
+//    }
+//
+//    public static void setMovieList(ArrayList<Movie> movieList) {
+//        Movie.movieList = movieList;
+//    }
 
     public void printMovieDetails() {
-        System.out.println("\nTitle: " + getTitle());
-        System.out.println("Genre: " + getGenre().toString().substring(0, 1).toUpperCase() + getGenre().toString().substring(1).toLowerCase());
-        System.out.println("Price: " + getPrice() + ":-");
-        System.out.println("Product ID: " + getProductId());
+        System.out.println("\nTitle: " + title);
+        System.out.println("Genre: " + genre.toString().substring(0, 1).toUpperCase() + genre.toString().substring(1).toLowerCase());
+        System.out.println("Price: " + price + ":-");
+        System.out.println("Product ID: " + productId);
         if (!getDirector().equals("Unknown")) {
-            System.out.println("Director: " + getDirector());
+            System.out.println("Director: " + director);
         }
     }
 
@@ -87,18 +87,6 @@ public class Movie {
         for (Movie movie : Movie.getMovieList()) {
             movie.printMovieDetails();
         }
-    }
-
-    public static Movie findMovieById(long productId, ArrayList<Movie> movieList) {
-        for (Movie movie : movieList) {
-            if (movie.getProductId() == productId) {
-                System.out.println("\nFound this movie:");
-                movie.printMovieDetails();
-                return movie;
-            }
-        }
-        System.out.println("\nDidn't find a movie with productId: " + productId);
-        return null;
     }
 
 }

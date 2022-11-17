@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Task1_2 {
     public static void main(String[] args) {
 
@@ -14,10 +16,25 @@ public class Task1_2 {
 
         Book.displayAllBooks();
 
-        Movie.findMovieById(244556L,Movie.getMovieList());
+        findMovieById(244556L,Movie.getMovieList());
+
+        MovieRecord movieRec1 = new MovieRecord("Bomb");
+
+        System.out.println(movieRec1);
 
 
+    }
 
+    public static Movie findMovieById(long productId, ArrayList<Movie> movieList) {
+        for (Movie movie : movieList) {
+            if (movie.getProductId() == productId) {
+                System.out.println("\nFound this movie:");
+                movie.printMovieDetails();
+                return movie;
+            }
+        }
+        System.out.println("\nDidn't find a movie with productId: " + productId);
+        return null;
     }
 
 }
