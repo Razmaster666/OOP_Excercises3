@@ -14,18 +14,16 @@ public class Task1_2 {
 
         Movie movieA = new Movie("Titanic", MovieGenre.ACTION, 99, 666);
         Movie movieB = new Movie("Titanic", MovieGenre.ACTION, 99, 666);
-
-        if (movieA.equals(movieB)){
-            System.out.println("Identical!");
-        }
-        else {
-            System.out.println("Not identical!");
-        }
+        Movie movieC = movieA;
 
 
-//        Movie.displayAllMovies();
+//        if (movieA.equals(movieB)){
+//            System.out.println("Identical!");
+//        }
+//        else {
+//            System.out.println("Not identical!");
+//        }
 
-//        Book.displayAllBooks();
 
 //        findMovieById(244556L,Movie.getMovieList());
 

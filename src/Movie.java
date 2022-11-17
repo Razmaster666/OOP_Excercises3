@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Movie {
     private String title;
@@ -101,11 +102,15 @@ public class Movie {
         return title + " " + productId;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Movie movie)) return false;
+        return productId == movie.productId;
+    }
 
-
-//    @Override
-//    public boolean equals(Object obj) {
-//        return (this == obj);
-//    }
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(productId);
+    }
 }
