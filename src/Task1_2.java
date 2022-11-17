@@ -12,11 +12,14 @@ public class Task1_2 {
         Movie movie3 = new Movie("Lost Highway", MovieGenre.DRAMA, 120, "David Lynch", 99995L);
         Movie movie4 = new Movie();
 
-        Movie.displayAllMovies();
+
+        movie3.printMovieDetails();
+
+//        Movie.displayAllMovies();
 
 //        Book.displayAllBooks();
 
-        findMovieById(244556L,Movie.getMovieList());
+//        findMovieById(244556L,Movie.getMovieList());
 
 //        MovieRecord movieRec1 = new MovieRecord("Bomb");
 //

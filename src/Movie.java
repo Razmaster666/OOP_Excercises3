@@ -8,8 +8,6 @@ public class Movie {
     private long productId;
     private static ArrayList<Movie> movieList = new ArrayList<>();
 
-
-
     public Movie() {
         this("Unknown", MovieGenre.UNKNOWN, 0, "Unknown", 0L);
     }
@@ -89,6 +87,12 @@ public class Movie {
         for (Movie movie : Movie.getMovieList()) {
             movie.printMovieDetails();
         }
+    }
+
+    public long randomNumber(){
+        double random = Math.random() * 6000;
+        long random2 = (long)random;
+        return random2;
     }
 
 }
