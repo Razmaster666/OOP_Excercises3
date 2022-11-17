@@ -12,8 +12,16 @@ public class Task1_2 {
         Movie movie3 = new Movie("Lost Highway", MovieGenre.DRAMA, 120, "David Lynch", 99995L);
         Movie movie4 = new Movie();
 
+        Movie movieA = new Movie("Titanic", MovieGenre.ACTION, 99, 666);
+        Movie movieB = new Movie("Titanic", MovieGenre.ACTION, 99, 666);
 
-        System.out.println(movie1);
+        if (movieA.equals(movieB)){
+            System.out.println("Identical!");
+        }
+        else {
+            System.out.println("Not identical!");
+        }
+
 
 //        Movie.displayAllMovies();
 
@@ -21,9 +29,6 @@ public class Task1_2 {
 
 //        findMovieById(244556L,Movie.getMovieList());
 
-//        MovieRecord movieRec1 = new MovieRecord("Bomb");
-
-//        System.out.println(movieRec1);
 
 
     }

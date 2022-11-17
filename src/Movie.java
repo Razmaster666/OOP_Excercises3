@@ -5,11 +5,12 @@ public class Movie {
     private MovieGenre genre;
     private int price;
     private String director;
-    private long productId;
+    private final long productId;
     private static ArrayList<Movie> movieList = new ArrayList<>();
 
     public Movie() {
         this("Unknown", MovieGenre.UNKNOWN, 0, "Unknown", 0L);
+
     }
 
     public Movie(String title, MovieGenre genre, int price, long productId) {
@@ -97,7 +98,14 @@ public class Movie {
 
     @Override
     public String toString(){
-        return getTitle() + " " + getProductId();
+        return title + " " + productId;
     }
+
+
+
+//    @Override
+//    public boolean equals(Object obj) {
+//        return (this == obj);
+//    }
 
 }
