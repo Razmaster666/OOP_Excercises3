@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.Objects;
+import java.util.*;
 
 public class Movie {
     private String title;
@@ -7,7 +6,8 @@ public class Movie {
     private int price;
     private String director;
     private final long productId;
-    private static ArrayList<Movie> movieList = new ArrayList<>();
+    private static List<Movie> movieList = new ArrayList<>();
+    private static Map <Long, Movie> movieMap = new HashMap<>();
 
     public Movie() {
         this("Unknown", MovieGenre.UNKNOWN, 0, "Unknown", 0L);
@@ -25,6 +25,7 @@ public class Movie {
         this.director = director;
         this.productId = productId;
         movieList.add(this);
+        movieMap.put(productId, this);
     }
 
     public String getDirector() {
@@ -43,8 +44,12 @@ public class Movie {
         return price;
     }
 
-    public static ArrayList<Movie> getMovieList() {
+    public static List<Movie> getMovieList() {
         return movieList;
+    }
+
+    public static Map<Long, Movie> getMovieMap() {
+        return movieMap;
     }
 
     public long getProductId() {
@@ -85,8 +90,12 @@ public class Movie {
         }
     }
 
+    public static void searchMovie(Long productId){
+        System.out.println(movieMap.get(productId));
+    }
+
     public static void displayAllMovies() {
-        for (Movie movie : Movie.getMovieList()) {
+        for (Movie movie : getMovieList()) {
             movie.printMovieDetails();
         }
     }

@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.List;
 
 public class Task1_2 {
     public static void main(String[] args) {
@@ -8,30 +8,27 @@ public class Task1_2 {
         Book book3 = new Book();
 
         Movie movie1 = new Movie("Godzilla", MovieGenre.ACTION, 79,9999L);
-        Movie movie2 = new Movie("Back to the Future", MovieGenre.COMEDY, 89, 244556L);
+        Movie movie2 = new Movie("Back to the Future", MovieGenre.COMEDY, 89, 9999L);
         Movie movie3 = new Movie("Lost Highway", MovieGenre.DRAMA, 120, "David Lynch", 99995L);
         Movie movie4 = new Movie();
 
-        Movie movieA = new Movie("Titanic", MovieGenre.ACTION, 99, 666);
-        Movie movieB = new Movie("Titanic", MovieGenre.ACTION, 99, 666);
-        Movie movieC = movieA;
 
+//        Movie.searchMovie(9999L);
 
-//        if (movieA.equals(movieB)){
-//            System.out.println("Identical!");
-//        }
-//        else {
-//            System.out.println("Not identical!");
-//        }
+//        Map<Long, Movie> movieMap2 = new HashMap<>();
+//
+//        movieMap2.put(3L, movie1);
+//
+//        System.out.println(movieMap2.get(3L));
 
+            Movie.displayAllMovies();
 
-//        findMovieById(244556L,Movie.getMovieList());
-
+        findMovieById(9999L,Movie.getMovieList());
 
 
     }
 
-    public static Movie findMovieById(long productId, ArrayList<Movie> movieList) {
+    public static Movie findMovieById(long productId, List<Movie> movieList) {
         for (Movie movie : movieList) {
             if (movie.getProductId() == productId) {
                 System.out.println("\nFound this movie:");
@@ -42,5 +39,18 @@ public class Task1_2 {
         System.out.println("\nDidn't find a movie with productId: " + productId);
         return null; // ?
     }
+
+
+//    public static Movie findMovieById(long productId, List<Movie> movieList) {
+//        for (Movie movie : movieList) {
+//            if (movie.getProductId() == productId) {
+//                System.out.println("\nFound this movie:");
+//                movie.printMovieDetails();
+//                return movie; // ?
+//            }
+//        }
+//        System.out.println("\nDidn't find a movie with productId: " + productId);
+//        return null; // ?
+//    }
 
 }
