@@ -21,7 +21,7 @@ public class Task1_2 {
 //
 //        System.out.println(movieMap2.get(3L));
 
-            Movie.displayAllMovies();
+        Movie.displayAllMovies();
 
         findMovieById(9999L,Movie.getMovieList());
 
@@ -34,14 +34,12 @@ public class Task1_2 {
         for (Movie movie : movieList) {
             if (movie.getProductId() == productId) {
                 hasProductId = true;
-                System.out.println("\nFound this movie:");
+                System.out.println("\nFound this movie\n↓");
                 movie.printMovieDetails();
             }
-
         }
-
         if(hasProductId == false){
-            System.out.println("Did not find a movie with Product ID: " + productId);
+            System.out.println("\n\t\tDid not find a movie with Product ID: " + productId + " :(");
         }
 
     }
