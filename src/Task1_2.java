@@ -25,19 +25,25 @@ public class Task1_2 {
 
         findMovieById(9999L,Movie.getMovieList());
 
-
     }
 
-    public static Movie findMovieById(long productId, List<Movie> movieList) {
+    public static void findMovieById(long productId, List<Movie> movieList) {
+
+        boolean hasProductId = false;
+
         for (Movie movie : movieList) {
             if (movie.getProductId() == productId) {
+                hasProductId = true;
                 System.out.println("\nFound this movie:");
                 movie.printMovieDetails();
-                return movie; // ?
             }
+
         }
-        System.out.println("\nDidn't find a movie with productId: " + productId);
-        return null; // ?
+
+        if(hasProductId == false){
+            System.out.println("Did not find a movie with Product ID: " + productId);
+        }
+
     }
 
 
