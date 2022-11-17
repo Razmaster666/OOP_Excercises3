@@ -30,11 +30,11 @@ public class Task1_2 {
             if (movie.getProductId() == productId) {
                 System.out.println("\nFound this movie:");
                 movie.printMovieDetails();
-                return movie;
+                return movie; // ?
             }
         }
         System.out.println("\nDidn't find a movie with productId: " + productId);
-        return null;
+        return null; // ?
     }
 
 }
