@@ -13,7 +13,7 @@ public class Task1_2 {
         Movie movie4 = new Movie();
 
 
-        movie3.printMovieDetails();
+        System.out.println(movie1);
 
 //        Movie.displayAllMovies();
 
