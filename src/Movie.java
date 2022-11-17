@@ -95,4 +95,9 @@ public class Movie {
         return random2;
     }
 
+    @Override
+    public String toString(){
+        return getTitle() + " " + getProductId();
+    }
+
 }

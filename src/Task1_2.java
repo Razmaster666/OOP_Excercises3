@@ -22,7 +22,7 @@ public class Task1_2 {
 //        findMovieById(244556L,Movie.getMovieList());
 
 //        MovieRecord movieRec1 = new MovieRecord("Bomb");
-//
+
 //        System.out.println(movieRec1);
 
 
