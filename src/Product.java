@@ -28,6 +28,7 @@ public abstract class Product {
     }
 
     public void printDetails(){
-        System.out.println("Product ID: " + productId + " Price: " + price);
+        System.out.println("Product ID: " + productId);
+        System.out.println("Price: " + price);
     }
 }

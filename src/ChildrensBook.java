@@ -19,10 +19,9 @@ public class ChildrensBook extends Book {
     }
 
     @Override
-    public void printBookDetails(){
+    public void printDetails(){
         System.out.println("\nTitle: " + title);
         System.out.println("Author: " + author);
-        System.out.println("Price: " + price + ":-");
         System.out.println("Recommended age " + recommendedAgeInfo);
     }
 }

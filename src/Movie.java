@@ -54,10 +54,7 @@ public class Movie extends Product {
         return productId;
     }
 
-    @Override
-    public void printDetails(){
-        System.out.println("Product ID: " + productId + " Price: " + price);
-    }
+
 
 //    public void setTitle(String title) {
 //        this.title = title;
@@ -83,11 +80,10 @@ public class Movie extends Product {
 //        Movie.movieList = movieList;
 //    }
 
-    public void printMovieDetails() {
+    @Override
+    public void printDetails() {
         System.out.println("\nTitle: " + title);
         System.out.println("Genre: " + genre.toString().substring(0, 1).toUpperCase() + genre.toString().substring(1).toLowerCase());
-        System.out.println("Price: " + price + ":-");
-        System.out.println("Product ID: " + productId);
         if (!getDirector().equals("Unknown")) {
             System.out.println("Director: " + director);
         }

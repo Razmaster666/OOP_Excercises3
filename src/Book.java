@@ -6,7 +6,7 @@ public class Book extends Product {
     protected static ArrayList<Book> bookList = new ArrayList<>();
 
     public Book(){
-        this(null, null, 0,0);
+        this("Unknown", "Unknown", 0, 0L);
     }
 
     public Book(String title, String author, int price, long productId) {
@@ -15,6 +15,7 @@ public class Book extends Product {
         this.price = price;
         this.productId = productId;
         productz.add(this);
+        bookList.add(this);
     }
 
     public String getTitle() {
@@ -37,16 +38,9 @@ public class Book extends Product {
         this.author = author;
     }
 
-    public void printBookDetails(){
-        System.out.println("\nTitle: " + title);
-        System.out.println("Author: " + author);
-        System.out.println("Price: " + price + ":-");
-    }
-
     @Override
     public void printDetails(){
-        System.out.println("Product ID: " + productId + " Price: " + price);
+        System.out.println("\nTitle: " + title);
+        System.out.println("Author: " + author);
     }
-
-
 }
