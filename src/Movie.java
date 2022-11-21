@@ -1,10 +1,10 @@
 import java.util.*;
 
 public class Movie extends Product {
-    private String title;
-    private MovieGenre genre;
-    private static List<Movie> movieList = new ArrayList<>();
-    private static Map <Long, Movie> movieMap = new HashMap<>();
+    protected String title;
+    protected MovieGenre genre;
+    protected static List<Movie> movieList = new ArrayList<>();
+    protected static Map <Long, Movie> movieMap = new HashMap<>();
 
     public Movie() {
         this("Unknown", MovieGenre.UNKNOWN, 0, 0L);
@@ -74,6 +74,8 @@ public class Movie extends Product {
     public void printDetails() {
         System.out.println("\nTitle: " + title);
         System.out.println("Genre: " + genre.toString().substring(0, 1).toUpperCase() + genre.toString().substring(1).toLowerCase());
+        System.out.println("Price: " + price +":-");
+        System.out.println("Product ID: " + productId);
     }
 
     public static void searchMovie(Long productId){

@@ -42,5 +42,7 @@ public class Book extends Product {
     public void printDetails(){
         System.out.println("\nTitle: " + title);
         System.out.println("Author: " + author);
+        System.out.println("Price: " + price);
+        System.out.println("Product ID: " + productId);
     }
 }

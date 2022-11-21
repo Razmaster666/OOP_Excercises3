@@ -22,6 +22,9 @@ public class ChildrensBook extends Book {
     public void printDetails(){
         System.out.println("\nTitle: " + title);
         System.out.println("Author: " + author);
-        System.out.println("Recommended age " + recommendedAgeInfo);
+        System.out.println("Price: " + price);
+        System.out.println("Recommended age: " + recommendedAgeInfo);
+        System.out.println("Product ID: " + productId);
+
     }
 }

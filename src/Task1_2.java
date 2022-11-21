@@ -6,14 +6,18 @@ public class Task1_2 {
 
         Movie movie1 = new Movie("Godzilla", MovieGenre.ACTION, 79, 9999L);
         Movie movie2 = new Movie("Back to the Future", MovieGenre.COMEDY, 89, 9999L);
-        Movie movie3 = new Movie("Lost Highway", MovieGenre.DRAMA, 120, "David Lynch", 99995L);
 
         ChildrensBook cb = new ChildrensBook("Nalle Puh", "Charles McCharles", 89, 912424, "3-6 years");
+
+        MovieWithDirector ran = new MovieWithDirector("Ran", MovieGenre.ACTION,132,666,"Akira Kurosawa");
 
 //        displayAllProducts();
 
 
         displayAllProductsWithOverride();
+
+//        displayAllMovies();
+//        displayAllBooks();
 
 
     }
