@@ -1,11 +1,9 @@
 import java.util.*;
 
-public class Movie {
+public class Movie extends Product {
     private String title;
     private MovieGenre genre;
-    private int price;
     private String director;
-    private final long productId;
     private static List<Movie> movieList = new ArrayList<>();
     private static Map <Long, Movie> movieMap = new HashMap<>();
 
@@ -24,8 +22,8 @@ public class Movie {
         this.price = price;
         this.director = director;
         this.productId = productId;
+        productz.add(this);
         movieList.add(this);
-        movieMap.put(productId, this);
     }
 
     public String getDirector() {
@@ -94,11 +92,7 @@ public class Movie {
         System.out.println(movieMap.get(productId));
     }
 
-    public static void displayAllMovies() {
-        for (Movie movie : getMovieList()) {
-            movie.printMovieDetails();
-        }
-    }
+
 
     public long randomNumber(){
         double random = Math.random() * 6000;

@@ -1,10 +1,9 @@
 import java.util.ArrayList;
 
-public class Book {
-    private String title;
-    private String author;
-    private int price;
-    private static ArrayList<Book> bookList = new ArrayList<>();
+public class Book extends Product {
+    protected String title;
+    protected String author;
+    protected static ArrayList<Book> bookList = new ArrayList<>();
 
     public Book(){
         this(null, null, 0);
@@ -14,7 +13,7 @@ public class Book {
         this.title = title;
         this.author = author;
         this.price = price;
-        bookList.add(this);
+        productz.add(this);
     }
 
     public String getTitle() {
@@ -23,10 +22,6 @@ public class Book {
 
     public String getAuthor() {
         return author;
-    }
-
-    public int getPrice() {
-        return price;
     }
 
     public static ArrayList<Book> getBookList() {
@@ -41,19 +36,11 @@ public class Book {
         this.author = author;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
     public void printBookDetails(){
-        System.out.println("\nTitle: " + getTitle());
-        System.out.println("Author: " + getAuthor());
-        System.out.println("Price: " + getPrice() + ":-");
+        System.out.println("\nTitle: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Price: " + price + ":-");
     }
 
-    public static void displayAllBooks(){
-        for (Book book : Book.getBookList()) {
-            book.printBookDetails();
-        }
-    }
+
 }

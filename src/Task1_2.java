@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class Task1_2 {
     public static void main(String[] args) {
 
@@ -7,54 +5,38 @@ public class Task1_2 {
         Book book2 = new Book("Doktor Glas", "Hjalmar Söderberg", 120);
         Book book3 = new Book();
 
-        Movie movie1 = new Movie("Godzilla", MovieGenre.ACTION, 79,9999L);
+        Movie movie1 = new Movie("Godzilla", MovieGenre.ACTION, 79, 9999L);
         Movie movie2 = new Movie("Back to the Future", MovieGenre.COMEDY, 89, 9999L);
         Movie movie3 = new Movie("Lost Highway", MovieGenre.DRAMA, 120, "David Lynch", 99995L);
         Movie movie4 = new Movie();
 
+        ChildrensBook cb = new ChildrensBook("Nalle Puh", "Charles McCharles", 89, "From 4 years");
 
-//        Movie.searchMovie(9999L);
-
-//        Map<Long, Movie> movieMap2 = new HashMap<>();
-//
-//        movieMap2.put(3L, movie1);
-//
-//        System.out.println(movieMap2.get(3L));
-
-        Movie.displayAllMovies();
-
-        findMovieById(9999L,Movie.getMovieList());
+        displayAllProducts();
 
     }
 
-    public static void findMovieById(long productId, List<Movie> movieList) {
-
-        boolean hasProductId = false;
-
-        for (Movie movie : movieList) {
-            if (movie.getProductId() == productId) {
-                hasProductId = true;
-                System.out.println("\nFound this movie\n↓");
+    public static void displayAllProducts(){
+        for (Product product : Product.getProductz()) {
+            if (product instanceof Book) {
+                Book book = (Book) product;
+                book.printBookDetails();
+            } else if (product instanceof Movie) {
+                Movie movie = (Movie) product;
                 movie.printMovieDetails();
             }
         }
-        if(hasProductId == false){
-            System.out.println("\n\t\tDid not find a movie with Product ID: " + productId + " :(");
-        }
-
     }
 
+    public static void displayAllBooks(){
+        for (Book book : Book.getBookList()) {
+            book.printBookDetails();
+        }
+    }
 
-//    public static Movie findMovieById(long productId, List<Movie> movieList) {
-//        for (Movie movie : movieList) {
-//            if (movie.getProductId() == productId) {
-//                System.out.println("\nFound this movie:");
-//                movie.printMovieDetails();
-//                return movie; // ?
-//            }
-//        }
-//        System.out.println("\nDidn't find a movie with productId: " + productId);
-//        return null; // ?
-//    }
-
+    public static void displayAllMovies() {
+        for (Movie movie : Movie.getMovieList()) {
+            movie.printMovieDetails();
+        }
+    }
 }
