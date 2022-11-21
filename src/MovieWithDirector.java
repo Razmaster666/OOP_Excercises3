@@ -16,11 +16,8 @@ public class MovieWithDirector extends Movie {
 
     @Override
     public void printDetails(){
-        System.out.println("\nTitle: " + title);
+        super.printDetails();
         System.out.println("Director: " + director);
-        System.out.println("Genre: " + genre.toString().substring(0, 1).toUpperCase() + genre.toString().substring(1).toLowerCase());
-        System.out.println("Price: " + price +":-");
-        System.out.println("Product ID: " + productId);
     }
 
 }

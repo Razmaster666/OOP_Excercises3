@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 
-public class Book extends Product {
+public class Book implements Product {
     protected String title;
     protected String author;
+    protected long productId;
+    protected int price;
     protected static ArrayList<Book> bookList = new ArrayList<>();
 
     public Book(){
@@ -14,7 +16,6 @@ public class Book extends Product {
         this.author = author;
         this.price = price;
         this.productId = productId;
-        productz.add(this);
         bookList.add(this);
     }
 

@@ -1,33 +1,7 @@
-import java.util.ArrayList;
-import java.util.List;
+public interface Product {
 
-public abstract class Product {
 
-    protected long productId;
-    protected int price;
-    protected static List<Product> productz = new ArrayList<>();
+    public abstract void printDetails();
 
-    public static List<Product> getProductz() {
-        return productz;
-    }
 
-    public long getProductId() {
-        return productId;
-    }
-
-    public void setProductId(long productId) {
-        this.productId = productId;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public void printDetails(){
-
-    }
 }

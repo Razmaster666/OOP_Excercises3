@@ -1,8 +1,10 @@
 import java.util.*;
 
-public class Movie extends Product {
+public class Movie implements Product, Comparable<Movie> {
     protected String title;
     protected MovieGenre genre;
+    protected long productId;
+    protected int price;
     protected static List<Movie> movieList = new ArrayList<>();
     protected static Map <Long, Movie> movieMap = new HashMap<>();
 
@@ -16,7 +18,6 @@ public class Movie extends Product {
         this.genre = genre;
         this.price = price;
         this.productId = productId;
-        productz.add(this);
         movieList.add(this);
     }
 
@@ -70,7 +71,7 @@ public class Movie extends Product {
 //        Movie.movieList = movieList;
 //    }
 
-    @Override
+
     public void printDetails() {
         System.out.println("\nTitle: " + title);
         System.out.println("Genre: " + genre.toString().substring(0, 1).toUpperCase() + genre.toString().substring(1).toLowerCase());
@@ -105,5 +106,16 @@ public class Movie extends Product {
     @Override
     public int hashCode() {
         return Objects.hash(productId);
+    }
+
+    @Override
+    public int compareTo(Movie movie){
+        if(productId == movie.productId){
+            return 0;
+        }
+        else if(productId < movie.productId){
+            return -1;
+        }
+        else return 1;
     }
 }
