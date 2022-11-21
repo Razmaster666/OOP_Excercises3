@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Product {
+public abstract class Product {
 
     protected long productId;
     protected int price;
@@ -25,5 +25,9 @@ public class Product {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public void printDetails(){
+        System.out.println("Product ID: " + productId + " Price: " + price);
     }
 }

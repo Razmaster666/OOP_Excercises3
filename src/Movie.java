@@ -54,6 +54,11 @@ public class Movie extends Product {
         return productId;
     }
 
+    @Override
+    public void printDetails(){
+        System.out.println("Product ID: " + productId + " Price: " + price);
+    }
+
 //    public void setTitle(String title) {
 //        this.title = title;
 //    }

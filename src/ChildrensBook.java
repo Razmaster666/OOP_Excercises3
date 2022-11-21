@@ -5,8 +5,8 @@ public class ChildrensBook extends Book {
     public ChildrensBook() {
     }
 
-    public ChildrensBook(String title, String author, int price, String recommendedAgeInfo) {
-        super(title, author, price);
+    public ChildrensBook(String title, String author, int price, long productId, String recommendedAgeInfo) {
+        super(title, author, price, productId);
         this.recommendedAgeInfo = recommendedAgeInfo;
     }
 

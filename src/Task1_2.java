@@ -1,18 +1,22 @@
 public class Task1_2 {
     public static void main(String[] args) {
 
-        Book book1 = new Book("Mountain of Madness", "HP Lovecraft", 98);
-        Book book2 = new Book("Doktor Glas", "Hjalmar Söderberg", 120);
-        Book book3 = new Book();
+        Book book1 = new Book("Mountain of Madness", "HP Lovecraft", 98, 55123);
+        Book book2 = new Book("Doktor Glas", "Hjalmar Söderberg", 120,57825);
 
         Movie movie1 = new Movie("Godzilla", MovieGenre.ACTION, 79, 9999L);
         Movie movie2 = new Movie("Back to the Future", MovieGenre.COMEDY, 89, 9999L);
         Movie movie3 = new Movie("Lost Highway", MovieGenre.DRAMA, 120, "David Lynch", 99995L);
-        Movie movie4 = new Movie();
 
-        ChildrensBook cb = new ChildrensBook("Nalle Puh", "Charles McCharles", 89, "From 4 years");
+        ChildrensBook cb = new ChildrensBook("Nalle Puh", "Charles McCharles", 89, 912424, "3-6 years");
 
-        displayAllProducts();
+//        displayAllProducts();
+
+
+        for (Product product : Product.getProductz()) {
+            product.printDetails();
+        }
+
 
     }
 
