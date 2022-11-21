@@ -3,32 +3,24 @@ import java.util.*;
 public class Movie extends Product {
     private String title;
     private MovieGenre genre;
-    private String director;
     private static List<Movie> movieList = new ArrayList<>();
     private static Map <Long, Movie> movieMap = new HashMap<>();
 
     public Movie() {
-        this("Unknown", MovieGenre.UNKNOWN, 0, "Unknown", 0L);
+        this("Unknown", MovieGenre.UNKNOWN, 0, 0L);
 
     }
 
     public Movie(String title, MovieGenre genre, int price, long productId) {
-        this(title, genre, price, "Unknown", productId);
-    }
-
-    public Movie(String title, MovieGenre genre, int price, String director, long productId) {
         this.title = title;
         this.genre = genre;
         this.price = price;
-        this.director = director;
         this.productId = productId;
         productz.add(this);
         movieList.add(this);
     }
 
-    public String getDirector() {
-        return director;
-    }
+
 
     public String getTitle() {
         return title;
@@ -68,9 +60,7 @@ public class Movie extends Product {
 //        this.price = price;
 //    }
 //
-//    public void setDirector(String director) {
-//        this.director = director;
-//    }
+
 //
 //    public void setProductId(long productId) {
 //        this.productId = productId;
@@ -84,9 +74,6 @@ public class Movie extends Product {
     public void printDetails() {
         System.out.println("\nTitle: " + title);
         System.out.println("Genre: " + genre.toString().substring(0, 1).toUpperCase() + genre.toString().substring(1).toLowerCase());
-        if (!getDirector().equals("Unknown")) {
-            System.out.println("Director: " + director);
-        }
     }
 
     public static void searchMovie(Long productId){
